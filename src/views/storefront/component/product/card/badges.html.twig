@@ -1,0 +1,15 @@
+{% sw_extends '@Storefront/storefront/component/product/card/badges.html.twig' %}
+
+{% block component_product_box_badge %}
+    {% set badgeLabel = product.customFields.swag_badge_label ?? null %}
+    {% set badgeColor = product.customFields.swag_badge_color ?? 'primary' %}
+
+    {% if badgeLabel %}
+        <span class="product-badge badge badge-{{ badgeColor }}">
+            {{ badgeLabel }}
+        </span>
+    {% endif %}
+
+    {# Original-Badges (z.B. "Neu", Rabatt-%) weiterhin anzeigen #}
+    {{ parent() }}
+{% endblock %}

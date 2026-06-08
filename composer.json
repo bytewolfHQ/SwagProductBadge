@@ -1,0 +1,26 @@
+{
+  "name": "swag/product-badge",
+  "description": "Adds configurable product badges via custom fields",
+  "type": "shopware-platform-plugin",
+  "license": "MIT",
+  "authors": [{ "name": "WolfgangT" }],
+  "require": {
+    "shopware/core": "~6.7.0"
+  },
+  "extra": {
+    "shopware-plugin-class": "Swag\\ProductBadge\\SwagProductBadge",
+    "label": {
+      "de-DE": "Produkt-Badge Plugin",
+      "en-GB": "Product Badge Plugin"
+    },
+    "description": {
+      "de-DE": "Zeigt konfigurierbare Badges auf Produktdaten an",
+      "en-GB": "Shows configurable badges on product cards"
+    }
+  },
+  "autoload": {
+    "psr-4": {
+      "Swag\\ProductBadge\\": "src/"
+    }
+  }
+}
