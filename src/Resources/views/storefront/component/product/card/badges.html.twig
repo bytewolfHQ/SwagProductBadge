@@ -4,11 +4,11 @@
     {% set badgeLabel = product.customFields.swag_badge_label ?? null %}
     {% set badgeColor = product.customFields.swag_badge_color ?? 'primary' %}
 
-    {{ parent() }}
-
     {% if badgeLabel %}
         <span class="badge bg-{{ badgeColor }}">
             {{ badgeLabel }}
         </span>
     {% endif %}
+
+    {{ parent() }}
 {% endblock %}

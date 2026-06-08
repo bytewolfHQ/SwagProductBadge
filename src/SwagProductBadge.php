@@ -41,40 +41,40 @@ class SwagProductBadge extends Plugin
                         'en-GB' => 'Produkt-Badge',
                         'de-DE' => 'Product Badge',
                     ],
-                    'relations' => [['entityName' => 'product']],
-                    'customFields' => [
-                        [
-                            'name' => 'swag_badge_label',
-                            'type' => CustomFieldTypes::TEXT,
-                            'config' => [
-                                'label' => [
-                                    'de-DE' => 'Badge-Text (z.B. "Neu", "Bestseller")',
-                                    'en-GB' => 'Badge text (e.g. "New", "Bestseller")',
-                                ],
-                                'componentName' => 'sw-field',
-                                'customFieldType' => 'text',
-                            ]
-                        ],
-                        [
-                            'name' => 'swag_badge_color',
-                            'type' => CustomFieldTypes::SELECT,
-                            'config' => [
-                                'label' => [
-                                    'de-DE' => 'Badge-Farbe',
-                                    'en-GB' => 'Badge color',
-                                ],
-                                'options' => [
-                                    ['value' => 'primary',   'label' => ['de-DE' => 'Blau',  'en-GB' => 'Blue']],
-                                    ['value' => 'success',   'label' => ['de-DE' => 'Grün',  'en-GB' => 'Green']],
-                                    ['value' => 'danger',    'label' => ['de-DE' => 'Rot',   'en-GB' => 'Red']],
-                                    ['value' => 'warning',   'label' => ['de-DE' => 'Gelb',  'en-GB' => 'Yellow']],
-                                    ['value' => 'secondary', 'label' => ['de-DE' => 'Grau',  'en-GB' => 'Grey']],
-                                ],
-                                'componentName' => 'sw-single-select',
-                                'customFieldType' => 'select',
+                ],
+                'relations' => [['entityName' => 'product']],
+                'customFields' => [
+                    [
+                        'name' => 'swag_badge_label',
+                        'type' => CustomFieldTypes::TEXT,
+                        'config' => [
+                            'label' => [
+                                'de-DE' => 'Badge-Text (z.B. "Neu", "Bestseller")',
+                                'en-GB' => 'Badge text (e.g. "New", "Bestseller")',
                             ],
+                            'componentName' => 'sw-field',
+                            'customFieldType' => 'text',
+                        ]
+                    ],
+                    [
+                        'name' => 'swag_badge_color',
+                        'type' => CustomFieldTypes::SELECT,
+                        'config' => [
+                            'label' => [
+                                'de-DE' => 'Badge-Farbe',
+                                'en-GB' => 'Badge color',
+                            ],
+                            'options' => [
+                                ['value' => 'primary',   'label' => ['de-DE' => 'Blau',  'en-GB' => 'Blue']],
+                                ['value' => 'success',   'label' => ['de-DE' => 'Grün',  'en-GB' => 'Green']],
+                                ['value' => 'danger',    'label' => ['de-DE' => 'Rot',   'en-GB' => 'Red']],
+                                ['value' => 'warning',   'label' => ['de-DE' => 'Gelb',  'en-GB' => 'Yellow']],
+                                ['value' => 'secondary', 'label' => ['de-DE' => 'Grau',  'en-GB' => 'Grey']],
+                            ],
+                            'componentName' => 'sw-single-select',
+                            'customFieldType' => 'select',
                         ],
-                    ]
+                    ],
                 ]
             ]
         ], $context);
